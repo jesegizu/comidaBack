@@ -5,11 +5,14 @@ import javax.persistence.*;
 @Entity
 @Table(name="PRODUCTO")
 public class ProductoEntity {
+
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private int idProducto;
+
     @Column
     private String nombreProducto;
+
     @Column
     private Double valorProducto;
 
