@@ -9,7 +9,7 @@ public class PedidoEntity {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private int idPedido;
     @Column
-    private String idCliente;
+    private String nombreCliente;
     @Column
     private Double precioVenta;
     @Column
@@ -31,12 +31,12 @@ public class PedidoEntity {
         this.idPedido = idPedido;
     }
 
-    public String getIdCliente() {
-        return idCliente;
+    public String getNombreCliente() {
+        return nombreCliente;
     }
 
-    public void setIdCliente(String idCliente) {
-        this.idCliente = idCliente;
+    public void setIdCliente(String nombreCliente) {
+        this.nombreCliente = nombreCliente;
     }
 
     public Double getPrecioVenta() {

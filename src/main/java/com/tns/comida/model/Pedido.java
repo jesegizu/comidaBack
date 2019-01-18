@@ -20,7 +20,21 @@ public class Pedido {
     }
 
     public int hacerPedido(PedidoEntity pedidoEntity){
+        double precioVenta = 0;
         if(pedidoEntity!= null) {
+            if(pedidoEntity.isHamburguesa()){
+                precioVenta+=10200;
+            }
+            if(pedidoEntity.isHelado()){
+                precioVenta+=3000;
+            }
+            if(pedidoEntity.isPapas()){
+                precioVenta+=1300;
+            }
+            if(pedidoEntity.isRefresco()){
+                precioVenta+=2500;
+            }
+            pedidoEntity.setPrecioVenta(precioVenta);
             pedidoRepository.save(pedidoEntity);
             return pedidoEntity.getIdPedido();
         }
