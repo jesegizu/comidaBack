@@ -22,6 +22,8 @@ public class PedidoEntity {
     private boolean helado;
     @Column
     private boolean hamburguesa;
+    @Column
+    private int idRepartidor;
 
     public int getIdPedido() {
         return idPedido;
@@ -85,5 +87,17 @@ public class PedidoEntity {
 
     public void setHamburguesa(boolean hamburguesa) {
         this.hamburguesa = hamburguesa;
+    }
+
+    public void setNombreCliente(String nombreCliente) {
+        this.nombreCliente = nombreCliente;
+    }
+
+    public int getIdRepartidor() {
+        return idRepartidor;
+    }
+
+    public void setIdRepartidor(int idRepartidor) {
+        this.idRepartidor = idRepartidor;
     }
 }

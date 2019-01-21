@@ -18,4 +18,10 @@ public class Repartidor {
     public List<RepartidorEntity>mostrarRepartidor(){
         return repartidorRepository.findAll();
     }
+
+    public void guardarRepartidor(int id){
+        RepartidorEntity repartidorEntity=  repartidorRepository.getOne(id);
+        repartidorEntity.setDisponibilidad(false);
+        repartidorRepository.save(repartidorEntity);
+    }
 }

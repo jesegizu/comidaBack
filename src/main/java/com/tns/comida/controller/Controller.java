@@ -54,8 +54,13 @@ public class Controller {
     public void registrarUsuario(@RequestBody UsuarioEntity user){
         usuario.registrar(user);
     }
+
     @PostMapping("/comprar")
     public int hacerPedido(@RequestBody PedidoEntity pedidoEntity){
         return pedido.hacerPedido(pedidoEntity);
     }
+
+    @PostMapping("/repartidor")
+    public void guardarRepartidor(@RequestBody List<PedidoEntity> listPedidoEntity){
+        pedido.guardarRepartidor(listPedidoEntity);}
 }
