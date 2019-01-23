@@ -1,5 +1,6 @@
 package com.tns.comida.controller;
 
+import com.tns.comida.dto.PedidoDTO;
 import com.tns.comida.entity.PedidoEntity;
 import com.tns.comida.entity.ProductoEntity;
 import com.tns.comida.entity.RepartidorEntity;
@@ -60,7 +61,13 @@ public class Controller {
         return pedido.hacerPedido(pedidoEntity);
     }
 
-    @PostMapping("/repartidor")
-    public void guardarRepartidor(@RequestBody List<PedidoEntity> listPedidoEntity){
-        pedido.guardarRepartidor(listPedidoEntity);}
+    /*@PostMapping("/repartidor")
+    public void asignarPedidosARepartidor(@RequestBody List<PedidoEntity> listPedidoEntity){
+        pedido.asignarPedidosARepartidor(listPedidoEntity);
+    }*/
+
+    @PostMapping("/asignar/repartidor")
+    public void asignarPedidosRepartidor(@RequestBody List<PedidoDTO> listPedidoDTO){
+        pedido.asignarPedidosARepartidor(listPedidoDTO);
+    }
 }
